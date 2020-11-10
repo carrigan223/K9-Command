@@ -2,9 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { css } from "@emotion/core"
-import { Container, Row } from "react-bootstrap"
-//This is our header component being implamented in layout so it overlays all pages
-//set to a responsive collapsible navbar
+import { Container, Row, Col } from "react-bootstrap"
+//This is our Footer component being implamented in layout so it overlays all pages
+//still have much to do with it
 const Footer = ({ siteTitle }) => {
   return (
     <footer
@@ -14,17 +14,20 @@ const Footer = ({ siteTitle }) => {
       `}
     >
       <Container>
-        <div
+        <Row
           css={css`
             margin-top: 15rem;
             padding-bottom: 1rem;
             padding-top: 1rem;
           `}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </div>
+          <Col sm={10} >
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </Col>
+          <Col css={css`display: flex; justify-content: flex-end;`}>AndrewCarrigan</Col>
+        </Row>
       </Container>
     </footer>
   )

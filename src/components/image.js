@@ -33,4 +33,7 @@ const LogoImage = () => {
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
+
+
+
 export default LogoImage
