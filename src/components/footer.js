@@ -26,7 +26,7 @@ const Footer = ({ siteTitle }) => {
             {` `}
             <a href="https://www.gatsbyjs.com">Gatsby</a>
           </Col>
-          <Col css={css`display: flex; justify-content: flex-end;`}>AndrewCarrigan</Col>
+          <Col css={css`display: flex; justify-content: flex-end; font-size: 20;`}>AndrewCarrigan</Col>
         </Row>
       </Container>
     </footer>
