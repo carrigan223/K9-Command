@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import LogoImage from "../components/image"
+import TrainingImage from "../components/trainingImage"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -14,7 +15,7 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <LogoImage />
       <LogoImage />
-      <LogoImage />
+      <TrainingImage />
       <LogoImage />
       <LogoImage />
       <LogoImage />
