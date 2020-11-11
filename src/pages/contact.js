@@ -11,6 +11,9 @@ const SecondPage = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
+
+  //this fuction is being called on the pressing of 
+  //the submit button to validate the form before sending it
   const formValidation = () => {
     if (firstName === "") {
       alert("Please enter a valid first name")
@@ -25,7 +28,8 @@ const SecondPage = () => {
         `first name: ${firstName}, last name: ${lastName},
                   phone number: ${phoneNumber}, email: ${email},
                   message: ${message}`
-      )
+      )//this regex expression is validating the email to make sure it is formated correctly
+      //for now we are just returning an alert with the state of the fields 
     } else {
       return alert("Please enter a valid E-mail")
     }
