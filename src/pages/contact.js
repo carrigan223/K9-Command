@@ -11,46 +11,23 @@ const SecondPage = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const [errorMessages, setErrorMessages] = useState([])
-  const [showErrors, setShowErrors] = useState(false)
-
-  let errors = []
-  function ValidateEmail(email) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return true
-    } else {
-      return false
-    }
-  }
-
   const formValidation = () => {
-    setErrorMessages([])
-
-    const isfirstNameValid = firstName !== ""
-    const isLastNameValid = lastName !== ""
-    const isMessageValid = message !== ""
-
-    if (!isfirstNameValid) {
-      errors.push("Name is not valid, please try again.")
+    if (firstName === "") {
+      alert("Please enter a valid first name")
     }
-    if (!isLastNameValid) {
-      errors.push("Name is not valid, please try again.")
+    if (lastName === "") {
+      alert("Please enter a valid last name")
     }
-    if (!ValidateEmail(email)) {
-      errors.push("Email is not valid, please try again.")
-    }
-    if (email === "") {
-      errors.push("Email field is empty, please try again.")
-    }
-    if (!isMessageValid) {
-      errors.push("Message is not valid, please try again.")
-    }
-    if (errors.length > 0) {
-      setShowErrors({ showErrors: true })
-      setErrorMessages(errors)
+    if (message.length < 2) {
+      alert("Please enter a valid message")
+    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return alert(
+        `first name: ${firstName}, last name: ${lastName},
+                  phone number: ${phoneNumber}, email: ${email},
+                  message: ${message}`
+      )
     } else {
-      setShowErrors({ showErrors: false })
-      alert("Email Sent")
+      return alert("Please enter a valid E-mail")
     }
   }
 
@@ -63,27 +40,69 @@ const SecondPage = () => {
         <Form>
           <Row>
             <Col>
-              <Form.Control placeholder="First name" />
+              <Form.Control
+                placeholder="First name"
+                onChange={e => setFirstName(e.target.value)}
+              />
             </Col>
             <Col>
-              <Form.Control placeholder="Last name" />
+              <Form.Control
+                placeholder="Last name"
+                onChange={e => setLastName(e.target.value)}
+              />
             </Col>
           </Row>
-          <Row css={css`padding-top: 1rem;`}>
+          <Row
+            css={css`
+              padding-top: 1rem;
+            `}
+          >
             <Col>
-              <Form.Control placeholder="E-mail" />
+              <Form.Control
+                placeholder="Phone Number"
+                onChange={e => setPhoneNumber(e.target.value)}
+              />
             </Col>
           </Row>
-          <Row css={css`padding-top: 1rem;`}>
+          <Row
+            css={css`
+              padding-top: 1rem;
+            `}
+          >
             <Col>
-              <Form.Control placeholder="E-mail" />
+              <Form.Control
+                placeholder="E-mail"
+                onChange={e => setEmail(e.target.value)}
+              />
             </Col>
           </Row>
-          <Row css={css`padding-top: 1rem;`}>
-            <Col >
-              <Form.Control as="textarea" rows={10} placeholder="E-mail" />
+          <Row
+            css={css`
+              padding-top: 1rem;
+            `}
+          >
+            <Col>
+              <Form.Control
+                as="textarea"
+                rows={10}
+                placeholder="Throw us a Bone..."
+                onChange={e => setMessage(e.target.value)}
+              />
             </Col>
           </Row>
+          <Button
+            css={css`
+              margin-top: 1rem;
+              background: #484c35;
+              border: none;
+              color: white;
+            `}
+            type="button"
+            variant="light"
+            onClick={() => formValidation(firstName)}
+          >
+            Submit
+          </Button>
         </Form>
       </Container>
     </Layout>
