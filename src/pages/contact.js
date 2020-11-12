@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { css } from "@emotion/core"
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import Fade from "react-reveal/Fade"
 
 const SecondPage = () => {
   const [firstName, setFirstName] = useState("")
@@ -40,79 +41,86 @@ const SecondPage = () => {
         <SEO title="Contact" />
         <Container>
           <Row>
-            <Col md={{ span: 6, offset: 3 }} css={css`padding: 1rem;`}>
-              <h1 >Contact us at K9-Obey</h1>
+            <Col
+              md={{ span: 6, offset: 3 }}
+              css={css`
+                padding: 1rem;
+              `}
+            >
+              <h1>Contact us at K9-Obey</h1>
               <p>Please give us a bark with any questions or for more info</p>
             </Col>
           </Row>
         </Container>
-        <Form>
-          <Row>
-            <Col xs={12} md={6}>
-              <Form.Control
-                placeholder="First name"
-                onChange={e => setFirstName(e.target.value)}
-              />
-            </Col>
-            <Col xs={12} md={6}>
-              <Form.Control
-                placeholder="Last name"
-                onChange={e => setLastName(e.target.value)}
-              />
-            </Col>
-          </Row>
-          <Row
-            css={css`
-              padding-top: 1rem;
-            `}
-          >
-            <Col>
-              <Form.Control
-                placeholder="Phone Number"
-                onChange={e => setPhoneNumber(e.target.value)}
-              />
-            </Col>
-          </Row>
-          <Row
-            css={css`
-              padding-top: 1rem;
-            `}
-          >
-            <Col>
-              <Form.Control
-                placeholder="E-mail"
-                onChange={e => setEmail(e.target.value)}
-              />
-            </Col>
-          </Row>
-          <Row
-            css={css`
-              padding-top: 1rem;
-            `}
-          >
-            <Col>
-              <Form.Control
-                as="textarea"
-                rows={10}
-                placeholder="Throw us a Bone..."
-                onChange={e => setMessage(e.target.value)}
-              />
-            </Col>
-          </Row>
-          <Button
-            css={css`
-              margin-top: 1rem;
-              background: #484c35;
-              border: none;
-              color: white;
-            `}
-            type="button"
-            variant="light"
-            onClick={() => formValidation(firstName)}
-          >
-            Submit
-          </Button>
-        </Form>
+        <Fade bottom>
+          <Form>
+            <Row>
+              <Col xs={12} md={6}>
+                <Form.Control
+                  placeholder="First name"
+                  onChange={e => setFirstName(e.target.value)}
+                />
+              </Col>
+              <Col xs={12} md={6}>
+                <Form.Control
+                  placeholder="Last name"
+                  onChange={e => setLastName(e.target.value)}
+                />
+              </Col>
+            </Row>
+            <Row
+              css={css`
+                padding-top: 1rem;
+              `}
+            >
+              <Col>
+                <Form.Control
+                  placeholder="Phone Number"
+                  onChange={e => setPhoneNumber(e.target.value)}
+                />
+              </Col>
+            </Row>
+            <Row
+              css={css`
+                padding-top: 1rem;
+              `}
+            >
+              <Col>
+                <Form.Control
+                  placeholder="E-mail"
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </Col>
+            </Row>
+            <Row
+              css={css`
+                padding-top: 1rem;
+              `}
+            >
+              <Col>
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  placeholder="Throw us a Bone..."
+                  onChange={e => setMessage(e.target.value)}
+                />
+              </Col>
+            </Row>
+            <Button
+              css={css`
+                margin-top: 1rem;
+                background: #484c35;
+                border: none;
+                color: white;
+              `}
+              type="button"
+              variant="light"
+              onClick={() => formValidation(firstName)}
+            >
+              Submit
+            </Button>
+          </Form>
+        </Fade>
       </Container>
     </Layout>
   )
