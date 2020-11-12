@@ -11,8 +11,7 @@ const SecondPage = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-
-  //this fuction is being called on the pressing of 
+  //this fuction is being called on the pressing of
   //the submit button to validate the form before sending it
   const formValidation = () => {
     if (firstName === "") {
@@ -28,8 +27,8 @@ const SecondPage = () => {
         `first name: ${firstName}, last name: ${lastName},
                   phone number: ${phoneNumber}, email: ${email},
                   message: ${message}`
-      )//this regex expression is validating the email to make sure it is formated correctly
-      //for now we are just returning an alert with the state of the fields 
+      ) //this regex expression is validating the email to make sure it is formated correctly
+      //for now we are just returning an alert with the state of the fields
     } else {
       return alert("Please enter a valid E-mail")
     }
@@ -39,17 +38,23 @@ const SecondPage = () => {
     <Layout>
       <Container>
         <SEO title="Contact" />
-        <h1>Contact us at K9-Obey</h1>
-        <p>Please give us a bark with any questions or for more info</p>
+        <Container>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }} css={css`padding: 1rem;`}>
+              <h1 >Contact us at K9-Obey</h1>
+              <p>Please give us a bark with any questions or for more info</p>
+            </Col>
+          </Row>
+        </Container>
         <Form>
           <Row>
-            <Col>
+            <Col xs={12} md={6}>
               <Form.Control
                 placeholder="First name"
                 onChange={e => setFirstName(e.target.value)}
               />
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <Form.Control
                 placeholder="Last name"
                 onChange={e => setLastName(e.target.value)}
