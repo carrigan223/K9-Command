@@ -21,12 +21,19 @@ const Footer = ({ siteTitle }) => {
             padding-top: 1rem;
           `}
         >
-          <Col sm={10} >
+          <Col xs={12}>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>
+            <a href="https://www.gatsbyjs.com" css={css`font-size:0.75;`}>Gatsby</a>
           </Col>
-          <Col css={css`display: flex; justify-content: flex-end; font-size: 20;`}>AndrewCarrigan</Col>
+          <Col xs={12}
+            css={css`
+              display: flex;
+              justify-content: flex-start;
+            `}
+          >
+            <text css={css`font-size: 0.25rem;`}>AndrewCarrigan</text>
+          </Col>
         </Row>
       </Container>
     </footer>

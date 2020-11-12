@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
+import {css} from "@emotion/core"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Layout = ({ children }) => {
@@ -35,6 +36,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
+      
       <Footer />
     </>
   )
