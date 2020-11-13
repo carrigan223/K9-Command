@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { css } from "@emotion/core"
-import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Fade from "react-reveal/Fade"
 import ContactForm from "../components/contactForm"
 
@@ -28,7 +28,7 @@ const SecondPage = () => {
           </Row>
         </Container>
         <Fade bottom>
-            <ContactForm />
+          <ContactForm />
         </Fade>
       </Container>
     </Layout>

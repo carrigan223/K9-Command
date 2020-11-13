@@ -8,10 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { css } from "@emotion/core"
 import Footer from "./footer"
 import Header from "./header"
-import { css } from "@emotion/core"
 import "bootstrap/dist/css/bootstrap.min.css"
+
+
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,11 +35,25 @@ const Layout = ({ children }) => {
           display: flex;
           min-height: 100vh;
           flex-direction: column;
-        `/*this css is setting up fexbox to give us a sticky footer, make sure my boot strap works with it */}
+          padding: 0 1.0875rem 1.45rem;
+        `}
       >
-        <main css={css`flex: 1;`}>{children}</main>
+        <main
+          css={css`
+            flex: 1;
+          `}
+        >
+          {children}
+        </main>
       </div>
-
+      <div
+        css={css`
+          display: "block";
+          padding: "20px";
+          height: "60px";
+          width: "100%";
+        `}
+      />
       <Footer />
     </>
   )

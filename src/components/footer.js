@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { css } from "@emotion/core"
@@ -24,15 +23,57 @@ const Footer = ({ siteTitle }) => {
           <Col xs={12}>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://www.gatsbyjs.com" css={css`font-size:0.75;`}>Gatsby</a>
+            <a
+              class="link"
+              href="https://www.gatsbyjs.com"
+              css={css`
+                font-size: 0.75;
+              `}
+            >
+              Gatsby
+            </a>
           </Col>
-          <Col xs={12}
+          <Col
+            xs={12}
             css={css`
               display: flex;
               justify-content: flex-start;
             `}
           >
-            <text css={css`font-size: 0.25rem;`}>AndrewCarrigan</text>
+            <text
+              css={css`
+                font-size: 0.25rem;
+              `}
+            >
+              AndrewCarrigan{" "}
+            </text>
+          </Col>
+          <Col
+            css={css`
+              font-size: 0.25rem;
+              display: flex;
+              justify-content: flex-end;
+            `}
+          >
+            <text>
+              <a
+                class="link"
+                target="_blank"
+                href="https://icons8.com/icons/set/dog-footprint"
+                rel="noreferrer"
+              >
+                Dog Paw icon
+              </a>{" "}
+              icon by{" "}
+              <a
+                class="link"
+                target="_blank"
+                href="https://icons8.com"
+                rel="noreferrer"
+              >
+                Icons8
+              </a>
+            </text>
           </Col>
         </Row>
       </Container>
