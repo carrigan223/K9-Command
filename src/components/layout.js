@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
-import {css} from "@emotion/core"
+import { css } from "@emotion/core"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Layout = ({ children }) => {
@@ -28,15 +28,15 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        css={css`
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        `/*this css is setting up fexbox to give us a sticky footer, make sure my boot strap works with it */}
       >
-        <main>{children}</main>
+        <main css={css`flex: 1;`}>{children}</main>
       </div>
-      
+
       <Footer />
     </>
   )
