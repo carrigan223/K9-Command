@@ -1,4 +1,5 @@
 import React from "react"
+import {css} from "@emotion/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -19,7 +20,7 @@ const LittleGirlImage = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img fluid={data.littleGirlImage.childImageSharp.fluid} />
+  return <Img css={css`border-radius:50%`} fluid={data.littleGirlImage.childImageSharp.fluid} />
 }
 
 export default LittleGirlImage

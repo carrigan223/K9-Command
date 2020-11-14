@@ -1,7 +1,6 @@
 import React from "react"
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { css } from "@emotion/core"
-import PhoneNumber from "react-phone-number"
 import Layout from "../components/layout"
 import LogoImage from "../components/image-components/logoImage"
 import LittleGirlImage from "../components/image-components/littleGirlImage"
@@ -11,9 +10,8 @@ import PettingImage from "../components/image-components/pettingImage"
 import PuppyWalkImage from "../components/image-components/puppyWalkImage"
 import YardPlayImage from "../components/image-components/yardPlayImage"
 import TrainingImage from "../components/image-components/trainingImage"
-
 import SEO from "../components/seo"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Card, CardDeck } from "react-bootstrap"
 
 const IndexPage = () => (
   <Layout>
@@ -41,7 +39,6 @@ const IndexPage = () => (
               margin-right: 2rem;
               color: #484c35;
             `}
-            
             href="tel:+6199299254"
           >
             619.929.9254
@@ -79,6 +76,64 @@ const IndexPage = () => (
         behavior, how to correct unwanted behaviors, along with offering a safe
         environment to work on socialization skills.
       </text>
+    </Container>
+    <Container
+      css={css`
+        margin-top: 3rem;
+      `}
+    >
+      <CardDeck>
+        <Card>
+          <PuppyWalkImage />
+          <Card.Body>
+            <Card.Title>Doggy Daycare</Card.Title>
+            <Card.Text>
+              Anytime you want your pup to have a day of fun while you're at
+              work, no worries, drop them off for a day of fun at K9 Obey!
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <Link to="/contact">
+              <small className="text-muted">Contact us for more info!</small>
+            </Link>
+          </Card.Footer>
+        </Card>
+
+        <Card>
+          <PettingImage />
+          <Card.Body>
+            <Card.Title>Training</Card.Title>
+            <Card.Text
+              css={css`
+                font-weight: normal;
+              `}
+            >
+              We offer a number of packages from Puppy Training to Intensive
+              Bootcamps led by Certified Master Trainer Erika TenEyck
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <Link to="/contact">
+              <small className="text-muted">Contact us for more info!</small>
+            </Link>
+          </Card.Footer>
+        </Card>
+        <Card>
+          <YardPlayImage />
+          <Card.Body>
+            <Card.Title>Boarding</Card.Title>
+            <Card.Text>
+              Going on vacation? Weekend getaway? Work Trip? Don,t worry! K9
+              Obey offers dog boarding.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <Link to="/contact">
+              <small className="text-muted">Contact us for more info!</small>
+            </Link>
+          </Card.Footer>
+        </Card>
+      </CardDeck>
     </Container>
   </Layout>
 )
