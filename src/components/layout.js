@@ -12,8 +12,7 @@ import { css } from "@emotion/core"
 import Footer from "./footer"
 import Header from "./header"
 import "bootstrap/dist/css/bootstrap.min.css"
-
-
+import "fontsource-playfair-display-sc"
 
 
 const Layout = ({ children }) => {

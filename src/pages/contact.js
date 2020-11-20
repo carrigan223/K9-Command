@@ -17,13 +17,20 @@ const SecondPage = () => {
         <Container>
           <Row>
             <Col
-              md={{ span: 6, offset: 3 }}
+              md={{ span: 8, offset: 2 }}
               css={css`
                 padding: 1rem;
               `}
             >
-              <h1>Contact us at K9-Obey</h1>
-              <p>Please give us a bark with any questions or for more info</p>
+              <h1
+              className="text-center"
+                css={css`
+                  font-family: "Playfair Display SC";
+                `}
+              >
+                Contact us at K9-Obey
+              </h1>
+              <p className="text-center">Please give us a bark with any questions or for more info</p>
             </Col>
           </Row>
         </Container>

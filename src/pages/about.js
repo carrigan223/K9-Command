@@ -27,6 +27,7 @@ const SecondPage = () => (
             className="text-center"
             css={css`
               padding-top: 1rem;
+              font-family: "Playfair Display SC";
             `}
           >
             Certified Master Trainer Erika TenEyck
@@ -34,6 +35,7 @@ const SecondPage = () => (
           <h4
             css={css`
               padding-top: 1rem;
+              font-family: "Playfair Display SC";
             `}
           >
             A little about me ...

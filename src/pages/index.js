@@ -100,7 +100,10 @@ const IndexPage = () => (
         </Card>
 
         <Card>
-          <PettingImage />
+          <Link to="/about">
+            <PettingImage />
+          </Link>
+
           <Card.Body>
             <Card.Title>Training</Card.Title>
             <Card.Text

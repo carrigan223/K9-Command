@@ -92,6 +92,7 @@ const ContactForm = () => {
           background: #484c35;
           border: none;
           color: white;
+          font-family: "Playfair Display SC";
         `}
         type="button"
         variant="light"

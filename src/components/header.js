@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import { Container, Navbar, Nav } from "react-bootstrap"
 //This is our header component being implamented in layout so it overlays all pages
 //set to a responsive collapsible navbar
+
 const Header = ({ siteTitle }) => {
   return (
     <header
@@ -20,7 +21,14 @@ const Header = ({ siteTitle }) => {
           `}
           expand="md"
         >
-          <Navbar.Brand href="/">{siteTitle}</Navbar.Brand>
+          <Navbar.Brand
+            href="/"
+            css={css`
+              font-family: "Playfair Display SC";
+            `}
+          >
+            {siteTitle}
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarResponsive" />
           <Navbar.Collapse id="navbarResponsive">
             <Nav as="ul" className="ml-auto">
@@ -30,26 +38,53 @@ const Header = ({ siteTitle }) => {
                   justify-content: space-between;
                 `}
               >
-                <Link to="/" className="nav-link" activeClassName="active">
+                <Link
+                  to="/"
+                  className="nav-link"
+                  activeClassName="active"
+                  css={css`
+                    font-family: "Playfair Display SC";
+                  `}
+                >
                   Home
                 </Link>
                 <Link
                   to="/contact"
                   className="nav-link"
                   activeClassName="active"
+                  css={css`
+                    font-family: "Playfair Display SC";
+                  `}
                 >
                   Contact Us
                 </Link>
-                <Link to="/rates" className="nav-link" activeClassName="active">
+                <Link
+                  to="/rates"
+                  className="nav-link"
+                  activeClassName="active"
+                  css={css`
+                    font-family: "Playfair Display SC";
+                  `}
+                >
                   Rates
                 </Link>
-                <Link to="/about" className="nav-link" activeClassName="active">
+                <Link
+                  to="/about"
+                  className="nav-link"
+                  activeClassName="active"
+                  css={css`
+                    font-family: "Playfair Display SC";
+                  `}
+                >
                   About
                 </Link>
                 <Link
                   to="/reviews"
                   className="nav-link"
                   activeClassName="active"
+                  css={css`
+                    font-family: "Playfair Display SC";
+                  `}
                 >
                   Reviews
                 </Link>
