@@ -86,7 +86,13 @@ const IndexPage = () => (
         <Card>
           <PuppyWalkImage />
           <Card.Body>
-            <Card.Title>Doggy Daycare</Card.Title>
+            <Card.Title
+              css={css`
+                font-family: "Playfair Display SC";
+              `}
+            >
+              Doggy Daycare
+            </Card.Title>
             <Card.Text>
               Anytime you want your pup to have a day of fun while you're at
               work, no worries, drop them off for a day of fun at K9 Obey!
@@ -105,7 +111,13 @@ const IndexPage = () => (
           </Link>
 
           <Card.Body>
-            <Card.Title>Training</Card.Title>
+            <Card.Title
+              css={css`
+                font-family: "Playfair Display SC";
+              `}
+            >
+              Training
+            </Card.Title>
             <Card.Text
               css={css`
                 font-weight: normal;
@@ -124,7 +136,13 @@ const IndexPage = () => (
         <Card>
           <YardPlayImage />
           <Card.Body>
-            <Card.Title>Boarding</Card.Title>
+            <Card.Title
+              css={css`
+                font-family: "Playfair Display SC";
+              `}
+            >
+              Boarding
+            </Card.Title>
             <Card.Text>
               Going on vacation? Weekend getaway? Work Trip? Don,t worry! K9
               Obey offers dog boarding.

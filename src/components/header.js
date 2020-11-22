@@ -42,6 +42,7 @@ const Header = ({ siteTitle }) => {
                   to="/"
                   className="nav-link"
                   activeClassName="active"
+                  activeStyle={{ border: "1px solid black" }}
                   css={css`
                     font-family: "Playfair Display SC";
                   `}
@@ -52,6 +53,7 @@ const Header = ({ siteTitle }) => {
                   to="/contact"
                   className="nav-link"
                   activeClassName="active"
+                  activeStyle={{ border: "1px solid black" }}
                   css={css`
                     font-family: "Playfair Display SC";
                   `}
@@ -62,6 +64,7 @@ const Header = ({ siteTitle }) => {
                   to="/rates"
                   className="nav-link"
                   activeClassName="active"
+                  activeStyle={{ border: "1px solid black" }}
                   css={css`
                     font-family: "Playfair Display SC";
                   `}
@@ -72,6 +75,7 @@ const Header = ({ siteTitle }) => {
                   to="/about"
                   className="nav-link"
                   activeClassName="active"
+                  activeStyle={{ border: "1px solid black" }}
                   css={css`
                     font-family: "Playfair Display SC";
                   `}
@@ -82,6 +86,7 @@ const Header = ({ siteTitle }) => {
                   to="/reviews"
                   className="nav-link"
                   activeClassName="active"
+                  activeStyle={{ border: "1px solid black" }}
                   css={css`
                     font-family: "Playfair Display SC";
                   `}
