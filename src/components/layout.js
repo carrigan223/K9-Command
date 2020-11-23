@@ -9,11 +9,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
+import LogoImage from "../components/image-components/logoImage"
 import Footer from "./footer"
 import Header from "./header"
+import { Container, Row, Col } from "react-bootstrap"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "fontsource-playfair-display-sc"
-
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,6 +30,39 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Container
+        css={css`
+          padding-top: 1rem;
+        `}
+      >
+        <LogoImage />
+      </Container>
+      <Container
+        css={css`
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        `}
+      >
+        <Row>
+          <Col
+            css={css`
+              display: flex;
+              flex: 1;
+              justify-content: center;
+            `}
+          >
+            <a
+              css={css`
+                margin-right: 2rem;
+                color: #484c35;
+              `}
+              href="tel:+6199299254"
+            >
+              619.929.9254
+            </a>
+          </Col>
+        </Row>
+      </Container>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         css={css`
@@ -53,7 +88,7 @@ const Layout = ({ children }) => {
           width: "100%";
         `}
       />
-      <Footer />
+      <Footer siteTitle={data.site.siteMetadata?.title || `Title`} />
     </>
   )
 }

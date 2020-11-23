@@ -1,9 +1,14 @@
-import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 import { Container, Row, Col } from "react-bootstrap"
 //This is our Footer component being implamented in layout so it overlays all pages
 //still have much to do with it
+const StyledLink = styled.a`
+  color: #c7bfb4;
+`
+
 const Footer = ({ siteTitle }) => {
   return (
     <footer
@@ -23,7 +28,7 @@ const Footer = ({ siteTitle }) => {
           <Col xs={12}>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a
+            <StyledLink
               class="link"
               href="https://www.gatsbyjs.com"
               css={css`
@@ -31,7 +36,7 @@ const Footer = ({ siteTitle }) => {
               `}
             >
               Gatsby
-            </a>
+            </StyledLink>
           </Col>
           <Col
             xs={12}
@@ -46,7 +51,17 @@ const Footer = ({ siteTitle }) => {
               `}
             >
               AndrewCarrigan{" "}
-            </text>
+            </text>{" "}
+            <Link
+              href="/"
+              css={css`
+                font-family: "Playfair Display SC";
+                margin-left: auto;
+                color: #c7bfb4;
+              `}
+            >
+              {siteTitle}
+            </Link>
           </Col>
           <Col
             css={css`
@@ -56,37 +71,39 @@ const Footer = ({ siteTitle }) => {
             `}
           >
             <text>
-              <a
+              <StyledLink
                 class="link"
                 target="_blank"
                 href="https://icons8.com/icons/set/dog-footprint"
                 rel="noreferrer"
               >
                 Dog Paw icon
-              </a>{" "}
+              </StyledLink>{" "}
               icon by{" "}
-              <a
+              <StyledLink
                 class="link"
                 target="_blank"
                 href="https://icons8.com"
                 rel="noreferrer"
               >
                 Icons8
-              </a>
+              </StyledLink>
+            </text>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="ml-auto mr-auto">
+            <text>
+              Give us a ring at {" "}
+              <StyledLink aria-label="phone-number" href="tel:+6199299254">
+                619.929.9254
+              </StyledLink>
             </text>
           </Col>
         </Row>
       </Container>
     </footer>
   )
-}
-
-Footer.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Footer

@@ -21,23 +21,10 @@ const Header = ({ siteTitle }) => {
           `}
           expand="md"
         >
-          <Navbar.Brand
-            href="/"
-            css={css`
-              font-family: "Playfair Display SC";
-            `}
-          >
-            {siteTitle}
-          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarResponsive" />
           <Navbar.Collapse id="navbarResponsive">
-            <Nav as="ul" className="ml-auto">
-              <Nav.Item
-                css={css`
-                  display: flex;
-                  justify-content: space-between;
-                `}
-              >
+            <Nav as="ul" className="ml-auto mr-auto">
+              <Nav className="flex-sm-col" defaultActiveKey="/">
                 <Link
                   to="/"
                   className="nav-link"
@@ -60,7 +47,7 @@ const Header = ({ siteTitle }) => {
                 >
                   Contact Us
                 </Link>
-                <Link
+                {/* <Link
                   to="/rates"
                   className="nav-link"
                   activeClassName="active"
@@ -70,7 +57,7 @@ const Header = ({ siteTitle }) => {
                   `}
                 >
                   Rates
-                </Link>
+                </Link> */}
                 <Link
                   to="/about"
                   className="nav-link"
@@ -82,7 +69,7 @@ const Header = ({ siteTitle }) => {
                 >
                   About
                 </Link>
-                <Link
+                {/* <Link
                   to="/reviews"
                   className="nav-link"
                   activeClassName="active"
@@ -92,8 +79,8 @@ const Header = ({ siteTitle }) => {
                   `}
                 >
                   Reviews
-                </Link>
-              </Nav.Item>
+                </Link> */}
+              </Nav>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

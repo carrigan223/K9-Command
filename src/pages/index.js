@@ -2,14 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
-import LogoImage from "../components/image-components/logoImage"
 import LittleGirlImage from "../components/image-components/littleGirlImage"
-import NachoImage from "../components/image-components/nachoImage"
-import CrewImage from "../components/image-components/crewImage"
 import PettingImage from "../components/image-components/pettingImage"
 import PuppyWalkImage from "../components/image-components/puppyWalkImage"
 import YardPlayImage from "../components/image-components/yardPlayImage"
-import TrainingImage from "../components/image-components/trainingImage"
 import SEO from "../components/seo"
 import { Container, Row, Col, Card, CardDeck } from "react-bootstrap"
 
@@ -22,28 +18,7 @@ const IndexPage = () => (
           css={css`
             margin-top: 3rem;
           `}
-        >
-          <LogoImage />
-        </Col>
-      </Row>
-      <Row>
-        <Col
-          css={css`
-            display: flex;
-            flex: 1;
-            justify-content: center;
-          `}
-        >
-          <a
-            css={css`
-              margin-right: 2rem;
-              color: #484c35;
-            `}
-            href="tel:+6199299254"
-          >
-            619.929.9254
-          </a>
-        </Col>
+        ></Col>
       </Row>
     </Container>
     <Container>
